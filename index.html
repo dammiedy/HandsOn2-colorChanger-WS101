@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Color Changer Hands-On</title>
+    <style>
+        h1 {
+            color: antiquewhite;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .myDiv {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            border: 3px solid rgb(255, 255, 255);
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: grab;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Color Changer Hands-On</h1>
+    <button id="colorButton">Click Me</button>
+    <div class="myDiv"></div>
+
+    <script>
+        const button = document.getElementById("colorButton");
+        const div = document.querySelector(".myDiv");
+        let isBlue = false;
+
+        button.addEventListener("click", function() {
+            if (isBlue) {
+                div.style.backgroundColor = "green";
+                isBlue = false;
+            } else {
+                div.style.backgroundColor = "blue";
+                isBlue = true;
+            }
+        });
+    </script>
+</body>
+</html>
